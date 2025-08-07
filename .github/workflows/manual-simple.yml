@@ -19,3 +19,8 @@ jobs:
       - name: 선택한 환경을 출력합니다.
         run: |
           echo "선택한 환경 : ${{ inputs.environment }}"
+          if [ "${{ inputs.environment }}" == "staging" ]; then
+            echo "first staging 환경입니다."
+          else
+            echo "second production 환경입니다."
+          fi
